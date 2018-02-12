@@ -1,0 +1,121 @@
+/**index.wxss**/
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #777;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 25%;
+  color: #777;
+}
+
+.on {
+  color: red;
+  border-bottom: 2rpx solid red;
+}
+
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.compact_detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10rpx;
+}
+
+.compact_detail text {
+  width: 100%;
+  margin: 10rpx 0;
+}
+
+.return-money {
+  width: 100%;
+}
+
+.return-money .scroll-inner {
+  width: 1180rpx;
+}
+
+.return-money .inner {
+  display: flex;
+  height: 50rpx;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 1180rpx;
+}
+
+.return-money .border {
+  border-bottom: 5px solid #f2f2f2;
+}
+
+.return-money .inner .font4 {
+  width: 150rpx;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.return-money .inner .font3 {
+  width: 115rpx;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.return-money .inner .txt {
+  font-size: 24rpx;
+}
+
+.photo-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rpx 30rpx;
+}
+
+.photo-box .img {
+  width: 120rpx;
+  height: 120rpx;
+  margin-right: 50rpx;
+}
+
+.photo-box .photo-index {
+  margin-right: 50rpx;
+}
+
+.photo-box .pho-pre {
+  color: #33b4ff;
+  margin-left: 50rpx;
+}
+
+.sele-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rpx;
+}
+
+.sele-box text {
+  font-size: 28rpx;
+  margin-right: 30rpx;
+}
+
+/* //滚动条透明 */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

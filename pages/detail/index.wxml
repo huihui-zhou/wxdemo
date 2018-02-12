@@ -1,0 +1,113 @@
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">合同信息</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">附件信息</view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">回款列表</view>
+  <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="swichNav">审核流程</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+  <!-- 我是合同 -->
+  <swiper-item>
+    <view class='view-box'>
+      <scroll-view scroll-y style="height:{{winHeight - 31}}px;">
+        <view class='compact_detail'>
+
+          <text>借款人：{{compact.customerName}}</text>
+          <text>联系电话：{{compact.phone}}</text>
+
+          <text>身份证：{{compact.identity}}</text>
+
+
+          <text>合同类型：{{compact.contractType}}</text>
+          <text>产品名称：{{compact.productName}}</text>
+
+
+          <text>产品类型：{{compact.productType}}</text>
+
+
+          <text>拟贷金额：{{compact.borrowMoney}}万</text>
+
+
+          <text>放款金额：{{compact.giveMoney}}万</text>
+
+          <text>年利率：{{compact.yearRate}}%</text>
+
+          <text>借款期限：{{compact.duration}}月</text>
+
+          <text>佣金率：{{compact.rate}}%</text>
+          <text>合同佣金：{{compact.mustBee}}元</text>
+          <text>返费收入：{{compact.returnFee}}元</text>
+          <text>材料费：{{compact.packing}}元</text>
+
+          <text>总收入：{{compact.totalInCome}}元</text>
+          <text>返费支出：{{compact.channelMoney}}元</text>
+          <text>结案类型：{{compact.type}}</text>
+
+          <text>还款方式：{{compact.payType}}</text>
+          <text>到期时间：{{compact.expireTime}}</text>
+
+          <text>放款时间：{{compact.giveTime}}</text>
+
+        </view>
+        <view class='compact_process'>
+        </view>
+      </scroll-view>
+    </view>
+  </swiper-item>
+  <!-- 我是附件 -->
+  <swiper-item>
+    <view class='view-box'>
+      <view class='photo-box' wx:for="{{photoArr}}" wx:key="item.id">
+        <text class='photo-index'>{{index}}</text>
+        <image class='img' mode='aspectFill' src="{{item.url}}"></image>
+        <text>{{item.document_c_name}}</text>
+        <text class='pho-pre' bindtap="preView" data-sour="{{item.url}}">预览</text>
+      </view>
+    </view>
+  </swiper-item>
+  <!-- 我是回款 -->
+  <swiper-item>
+    <view class='view-box'>
+
+      <scroll-view class='return-money' scroll-x="true">
+        <scroll-view class='scroll-inner' scroll-y="true" style="height:{{winHeight - 31}}px">
+          <view class='inner border'>
+            <text class='font4'>居间协议</text>
+            <text class='font3'>预付款</text>
+            <text class='font3'>服务费</text>
+            <text class='font4'>返费收入</text>
+            <text class='font3'>材料费</text>
+            <text class='font4'>返费支出</text>
+            <text class='font4'>支付金额</text>
+            <text class='font4'>支付日期</text>
+          </view>
+          <view class='inner' wx:for="{{returnArr}}" wx:key="item.id">
+            <text class='font4 txt'>{{item.num}}</text>
+            <text class='font3'>{{item.deposit}}</text>
+            <text class='font3'>{{item.commission}}</text>
+            <text class='font4'>{{item.returnFee}}</text>
+            <text class='font3'>{{item.packing}}</text>
+            <text class='font4'>{{item.channelMoney}}</text>
+            <text class='font4'>{{item.payMoney}}</text>
+            <text class='font4 txt'>{{item.createTime}}</text>
+          </view>
+
+
+        </scroll-view>
+      </scroll-view>
+
+
+    </view>
+  </swiper-item>
+  <!-- 我是审核 -->
+  <swiper-item>
+    <view class='view-box'>
+      <view class='sele-box' wx:for="{{seleArr}}" wx:key="item.id">
+        <text>{{item.status}}</text>
+        <text>{{item.process}}</text>
+        <text>{{item.lastUpdateTime}}</text>
+        <text>{{item.lastUpdateUserName}}</text>
+      </view>
+    </view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,9 @@
+<view>
+  <image class='bg_img' src="../../assets/images/login.png"></image>
+  <view  class='form_user'>
+     <view class='form_inner'> <text class='user_text'>用户名：</text><input class='user_input' focus="{{true}}" name='username' value="{{username}}" bindblur="userBlur"></input></view>
+     <view class='form_inner'><text class='user_password'>密码：</text><input class='user_input' password="{{true}}" name='userpass' bindblur="passBlur" value="{{password}}"></input></view>
+      <view class='form_inner'><button  class='reset_btn' bindtap="resetBtn">重置</button><button class='submit_btn' bindtap="submitBtn">提交</button></view>
+  </view >
+</view>
+

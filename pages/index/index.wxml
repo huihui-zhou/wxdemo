@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+    <view class='list_title'>
+      <text class='tit_f4'>客户姓名</text>
+      <text class='tit_f4'>放款类型</text>
+      <text class='tit_f4'>审核步骤</text>
+      <text class='tit_f3'>发起人</text>
+      <text class='tit_f3'>佣金率</text>
+      <text class='tit_f3'>下一步</text>
+      <text class='tit_f2'>城市</text>
+      <text class='tit_f2'>渠道</text>
+      <text class='tit_f2'>时间</text>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y style="height: {{scrollHeight?scrollHeight+'px':'auto'}}" scroll-y>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%" wx:for="{{array}}" wx:key="item.id">
+      <view class='list_content' bindlongpress="longTab" data-id='{{item.id}}' data-isSpecial="{{item.isSpecial}}" data-customerId="{{item.customerId}}" data-achievementId="{{item.achievementId}}" bindtap='tapCheck'>
+        <text class='text_ell tit_f4'>{{item.customerName}}</text>
+        <text class='text_ell tit_f4'>{{item.contractType}}</text>
+        <text class='text_ell tit_f4'>审核中</text>
+        <text class='text_ell tit_f3'>{{item.createUserName}}</text>
+        <text class='text_ell tit_f3'>{{item.rate+'%'}}</text>
+        <text class='text_ell tit_f3'>{{item.nextProcess}}</text>
+        <text class='text_ell tit_f2'>{{item.city}}</text>
+        <text class='text_ell tit_f2'>{{item.utmSource}}</text>
+        <text class='text_ell tit_f2'>{{item.lastUpdateTime}}</text>
+      </view>
+    </scroll-view>
+  </scroll-view>
+
+</view>

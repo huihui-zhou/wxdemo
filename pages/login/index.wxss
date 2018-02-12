@@ -1,0 +1,47 @@
+/* pages/login/index.wxss */
+.bg_img{
+  height:685rpx;
+  width: 375rpx; 
+}
+.form_user{
+  justify-content:space-around;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 150rpx;
+  width: 310rpx;
+  top:50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%,-50%);
+  background-color:rgba(255,255,255,.5);
+  padding: 20rpx 10rpx;
+  border-radius: 5rpx;
+}
+.form_inner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.user_text{
+  font-size: 21rpx;
+  color: #323232;
+}
+.user_password{
+  font-size: 21rpx;
+  color: #323232;
+}
+.user_input{
+  border: 1rpx solid #f0f0f0;
+}
+.reset_btn{
+  background-color:#F56C6C;
+  font-size: 16rpx;
+  color: #ffffff;
+}
+.submit_btn{
+background-color:#67C23A;
+font-size: 16rpx;
+color: #ffffff;
+}
